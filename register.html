@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Basic Page Info -->
+		<meta charset="utf-8" />
+		<title>MagicVisual</title>
+
+		<!-- Site favicon -->
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="vendors/images/apple-touch-icon.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="vendors/images/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="vendors/images/favicon-16x16.png"
+		/>
+
+		<!-- Mobile Specific Metas -->
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, maximum-scale=1"
+		/>
+
+		<!-- Google Font -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="vendors/styles/core.css" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="vendors/styles/icon-font.min.css"
+		/>
+		<link rel="stylesheet" type="text/css" href="vendors/styles/style.css" />
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=G-GBZ3SGGX85"
+		></script>
+		<script
+			async
+			src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2973766580778258"
+			crossorigin="anonymous"
+		></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
+
+			gtag("config", "G-GBZ3SGGX85");
+		</script>
+		<!-- Google Tag Manager -->
+		<script>
+			(function (w, d, s, l, i) {
+				w[l] = w[l] || [];
+				w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+				var f = d.getElementsByTagName(s)[0],
+					j = d.createElement(s),
+					dl = l != "dataLayer" ? "&l=" + l : "";
+				j.async = true;
+				j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+				f.parentNode.insertBefore(j, f);
+			})(window, document, "script", "dataLayer", "GTM-NXZMQSS");
+		</script>
+		<!-- End Google Tag Manager -->
+	</head>
+	<body class="sidebar-dark header-dark">
+		<!-- <div class="pre-loader">
+			<div class="pre-loader-box">
+				<div class="loader-logo">
+					<img src="vendors/images/logo.jpeg" alt="" />
+				</div>
+				<div class="loader-progress" id="progress_div">
+					<div class="bar" id="bar1"></div>
+				</div>
+				<div class="percent" id="percent1">0%</div>
+				<div class="loading-text">Loading...</div>
+			</div>
+		</div> -->
+
+		<div class="header ">
+			<div class="header-left">
+				<div class="menu-icon bi bi-list"></div>
+				<div
+					class="search-toggle-icon bi bi-search"
+					data-toggle="header_search"
+				></div>
+				<div class="header-search">
+					<form>
+						<div class="form-group mb-0">
+							<!-- <i class="dw dw-search2 search-icon"></i> -->
+							<input
+								type="text"
+								class="form-control search-input"
+								placeholder="Search Here"
+							/>
+							<div class="dropdown">
+								<a
+									class="dropdown-toggle no-arrow"
+									href="#"
+									role="button"
+									data-toggle="dropdown"
+								>
+								<i class="icon-copy bi bi-search"></i>
+								</a>
+
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="header-right">
+				
+				<div class="user-info-dropdown">
+					<div class="dropdown">
+						<a
+							class="dropdown-toggle"
+							href="#"
+							role="button"
+							data-toggle="dropdown"
+						>
+							<span class="user-icon">
+								<img src="vendors/images/logo.jpeg" alt="" />
+							</span>
+							<span class="user-name">Coyote@342</span>
+						</a>
+						<div
+							class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list"
+						>
+							
+							<a class="dropdown-item" href="profile.html"
+								><i class="dw dw-settings2"></i> Opciones</a
+							>
+							<a class="dropdown-item" href="perfil.html"
+								><i class="dw dw-user1"></i> Perfil</a
+							>
+							<a class="dropdown-item" href="login.html"
+								><i class="dw dw-logout"></i> Cerrar Sesión</a
+							>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+
+		<div class="right-sidebar">
+			<div class="sidebar-title">
+				<h3 class="weight-600 font-16 text-blue">
+					Layout Settings
+					<span class="btn-block font-weight-400 font-12"
+						>User Interface Settings</span
+					>
+				</h3>
+				<div class="close-sidebar" data-toggle="right-sidebar-close">
+					<i class="icon-copy ion-close-round"></i>
+				</div>
+			</div>
+		</div>
+
+		<div class="left-side-bar">
+			<div class="brand-logo">
+				<a href="index.html">
+					<img src="vendors/images/logo.jpeg" alt="" class="dark-logo" />
+					<img
+						src="vendors/images/deskapp-logo-white.svg"
+						alt=""
+						class="light-logo"
+					/>
+				</a>
+				<div class="close-sidebar" data-toggle="left-sidebar-close">
+					<i class="ion-close-round"></i>
+				</div>
+			</div>
+			<div class="menu-block customscroll">
+				<div class="sidebar-menu">
+					<ul id="accordion-menu">
+
+						<li>
+							<div class="dropdown-divider"></div>
+						</li>
+						<li>
+							<div class="sidebar-small-cap">Categorias</div>
+						</li>
+						<li class="dropdown">
+							<a href="javascript:;" class="dropdown-toggle">
+								<span class="micon bi bi-house"></span
+								><span class="mtext">Categorias</span>
+							</a>
+							<ul class="submenu">
+								<li><a >Todos</a></li>
+								<li><a href="index2">Dashboard style 2</a></li>
+								<li><a href="index3.html">Dashboard style 3</a></li>
+							</ul>
+						</li>
+						<li>
+							<div class="dropdown-divider"></div>
+						</li>
+										</ul>
+				</div>
+			</div>
+		</div>
+		<div class="mobile-menu-overlay"></div>
+
+		<div class="main-container">
+			<div class="pd-ltr-20 xs-pd-20-10">
+				<div class="min-height-200px">
+					<div class="modal-footer">
+						
+						<button type="button" class="btn btn-primary" data-toggle="modal"
+						data-target="#bd-example-modal-lg">
+							<i class="icon-copy ion-android-add-circle"></i>
+							Publicación
+						</button>
+					</div>
+					<!-- Large modal -->
+					<div class="col-md-4 col-sm-12 mb-30">
+						<div class="pd-20  height-100-p">
+					
+							<div
+								class="modal fade bs-example-modal-m"
+								id="bd-example-modal-lg"
+								tabindex="-1"
+								role="dialog"
+								aria-labelledby="myLargeModalLabel"
+								aria-hidden="true"
+							>
+								<div class="modal-dialog modal-m modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h4 class="modal-title" id="myLargeModalLabel">
+												Nueva Publicación
+											</h4>
+											<button
+												type="button"
+												class="close"
+												data-dismiss="modal"
+												aria-hidden="true"
+											>
+												
+											</button>
+										</div>
+										<div class="modal-body">
+											
+											<form id="myForm">
+												<div class="form-group">
+													<label for="titulo">Agregar título</label>
+													<input id="titulo" class="form-control" type="text" placeholder="Titulo" required>
+												</div>
+											
+												<div class="form-group">
+													<label for="categoria">Selecciona una categoría</label>
+													<select id="categoria" class="custom-select2 form-control" name="state" style="width: 100%; height: 38px" required>
+														<option value=""></option>
+														<option value="AZ">Digital</option>
+														<option value="CO">Óleo</option>
+														<option value="ID">Fotografía</option>
+														<option value="MT">Abstracto</option>
+														<option value="NE">Realismo</option>
+														<option value="NM">Cubismo</option>
+														<option value="ND">Surrealismo</option>
+														<option value="UT">Neoplasticismo</option>
+														<option value="WY">Futurismo</option>
+													</select>
+												</div>
+											
+												<div class="form-group">
+													<label for="imagen">Insertar imagen</label>
+													<input id="image-input" type="file" class="form-control-file form-control height-auto" required>
+												</div>
+												<div class="form-group">
+													<div class="image-container">
+														<img id="preview-image" src="#" alt="Ninguna imagen seleccionada">
+													</div>
+												</div> 
+											
+												<div class="form-group">
+													<label for="descripcion">Descripción</label>
+													<input id="descripcion" class="form-control" type="text" placeholder="Johnny Brown" required>
+												</div>
+											
+										</div>
+										<div class="modal-footer">
+											<button
+												type="button"
+												class="btn btn-secondary"
+												data-dismiss="modal"
+												onclick="cancelarPublicacion();"
+											>
+												Cancelar
+											</button>
+											<button type="submit" class="btn btn-primary">Publicar</button>
+
+										
+										</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer-wrap pd-20 mb-20 card-box">
+					Aplicación desarrollada por Juanito
+					<a href="https://github.com/dropways" target="_blank"
+						>Copyright</a
+					>
+				</div>
+			</div>
+		</div>
+		<!-- welcome modal start -->
+		
+		<!-- welcome modal end -->
+		<!-- js -->
+		<script src="vendors/scripts/core.js"></script>
+		<script src="vendors/scripts/script.min.js"></script>
+		<script src="vendors/scripts/process.js"></script>
+		<script src="vendors/scripts/layout-settings.js"></script>
+		<script src="vendors/scripts/index.js"></script>
+		<script src="vendors/scripts/scriptindex.js"></script>
+
+		
+
+		<!-- add sweet alert js & css in footer -->
+		<script src="src/plugins/sweetalert2/sweetalert2.all.js"></script>
+		<script src="src/plugins/sweetalert2/sweet-alert.init.js"></script>
+		<!-- Google Tag Manager (noscript) -->
+		<noscript
+			><iframe
+				src="https://www.googletagmanager.com/ns.html?id=GTM-NXZMQSS"
+				height="0"
+				width="0"
+				style="display: none; visibility: hidden"
+			></iframe
+		></noscript>
+		<!-- End Google Tag Manager (noscript) -->
+	</body>
+</html>

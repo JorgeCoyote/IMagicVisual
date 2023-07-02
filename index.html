@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Basic Page Info -->
+		<meta charset="utf-8" />
+		<title>MagicVisual</title>
+
+		<!-- Site favicon -->
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="vendors/images/apple-touch-icon.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="vendors/images/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="vendors/images/favicon-16x16.png"
+		/>
+
+		<!-- Mobile Specific Metas -->
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, maximum-scale=1"
+		/>
+
+		<!-- Google Font -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="vendors/styles/core.css" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="vendors/styles/icon-font.min.css"
+		/>
+		<link rel="stylesheet" type="text/css" href="vendors/styles/style.css" />
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=G-GBZ3SGGX85"
+		></script>
+		<script
+			async
+			src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2973766580778258"
+			crossorigin="anonymous"
+		></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
+
+			gtag("config", "G-GBZ3SGGX85");
+		</script>
+		<!-- Google Tag Manager -->
+		<script>
+			$('input').on('change', function() {
+    $('body').toggleClass('blue');
+  });
+  
+			(function (w, d, s, l, i) {
+				w[l] = w[l] || [];
+				w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+				var f = d.getElementsByTagName(s)[0],
+					j = d.createElement(s),
+					dl = l != "dataLayer" ? "&l=" + l : "";
+				j.async = true;
+				j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+				f.parentNode.insertBefore(j, f);
+			})(window, document, "script", "dataLayer", "GTM-NXZMQSS");
+		</script>
+		<!-- End Google Tag Manager -->
+	</head>
+	<body class="sidebar-dark header-dark">
+		<!-- <div class="pre-loader">
+			<div class="pre-loader-box">
+				<div class="loader-logo">
+					<img src="vendors/images/logo.jpeg" alt="" />
+				</div>
+				<div class="loader-progress" id="progress_div">
+					<div class="bar" id="bar1"></div>
+				</div>
+				<div class="percent" id="percent1">0%</div>
+				<div class="loading-text">Loading...</div>
+			</div>
+		</div> -->
+
+		<div class="header ">
+			<div class="header-left">
+				<div class="menu-icon bi bi-list"></div>
+				<div
+					class="search-toggle-icon bi bi-search"
+					data-toggle="header_search"
+				></div>
+				<div class="header-search">
+					<form>
+						<div class="form-group mb-0">
+							<!-- <i class="dw dw-search2 search-icon"></i> -->
+							<input
+								type="text"
+								class="form-control search-input"
+								placeholder="Search Here"
+							/>
+							<div class="dropdown">
+								<a
+									class="dropdown-toggle no-arrow"
+									href="#"
+									role="button"
+									data-toggle="dropdown"
+								>
+								<i class="icon-copy bi bi-search"></i>
+								</a>
+
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="header-right">
+				
+				<div class="user-info-dropdown">
+					<div class="dropdown">
+						<a
+							class="dropdown-toggle"
+							href="#"
+							role="button"
+							data-toggle="dropdown"
+						>
+							<span class="user-icon">
+								<img src="vendors/images/logo.jpeg" alt="" />
+							</span>
+							<span class="user-name">Coyote@342</span>
+						</a>
+						<div
+							class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list"
+						>
+							
+							<a class="dropdown-item" href="profile.html"
+								><i class="dw dw-settings2"></i> Opciones</a
+							>
+							<a class="dropdown-item" href="perfil.html"
+								><i class="dw dw-user1"></i> Perfil</a
+							>
+							<a class="dropdown-item" href="login.html"
+								><i class="dw dw-logout"></i> Cerrar Sesión</a
+							>
+						</div>
+					</div>
+				</div>
+				<div class="github-link">
+					<a href="https://github.com/dropways/deskapp" target="_blank"
+						><img src="vendors/images/github.svg" alt=""
+					/></a>
+				</div>
+			</div>
+		</div>
+
+		<div class="right-sidebar">
+			<div class="sidebar-title">
+				<h3 class="weight-600 font-16 text-blue">
+					Layout Settings
+					<span class="btn-block font-weight-400 font-12"
+						>User Interface Settings</span
+					>
+				</h3>
+				<div class="close-sidebar" data-toggle="right-sidebar-close">
+					<i class="icon-copy ion-close-round"></i>
+				</div>
+			</div>
+		</div>
+
+		<!-- Barra de navegación -->
+		<div class="left-side-bar">
+			<div class="brand-logo">
+				<a href="index.html">
+					<img src="vendors/images/logo.jpeg" alt="" class="dark-logo" />
+					<img
+						src="vendors/images/deskapp-logo-white.svg"
+						alt=""
+						class="light-logo"
+					/>
+				</a>
+				<div class="close-sidebar" data-toggle="left-sidebar-close">
+					<i class="ion-close-round"></i>
+				</div>
+			</div>
+			<div class="menu-block customscroll">
+				<div class="sidebar-menu">
+					<ul id="accordion-menu">
+
+						<li>
+							<div class="dropdown-divider"></div>
+						</li>
+						<li>
+							<div class="sidebar-small-cap">Categorias</div>
+						</li>
+						<li class="dropdown">
+							<a href="javascript:;" class="dropdown-toggle">
+								<span class="micon bi bi-house"></span>
+								<span class="mtext">Categorías</span>
+							</a>
+							<ul class="submenu">
+								
+								<li><a>Todos</a></li>
+								<script>
+							const categorias = [
+							"Digital",
+							"Oleo",
+							"Fotografía",
+							"Abstracto",
+							"Realismo",
+							"Cubismo",
+							"Surrealismo",
+							"Neoplasticismo",
+							"Futurismo",
+							"Otros"
+												];
+
+categorias.forEach(categoria => {
+    document.write(`<li><a>${categoria}</a></li>`);
+});
+								</script>
+							</ul>
+						</li>
+						
+						<li>
+							<div class="dropdown-divider"></div>
+						</li>
+							</ul>
+				</div>
+			</div>
+		</div>
+	<!-- Barra de navegación fin -->
+
+	<div class="user-notification">
+		<div class="dropdown">
+			<a
+				class="dropdown-toggle no-arrow"
+				href="#"
+				role="button"
+				data-toggle="dropdown"
+			>
+			<i class="bi bi-chat-dots"></i>
+				<span class="badge notification-active"></span>
+			</a>
+			<div class="dropdown-menu dropdown-menu-right">
+				<div class="notification-list mx-h-350 customscroll">
+					<ul>
+						<li>
+							<a href="#">
+								<img src="vendors/images/img.jpg" alt="" />
+								<h3>John Doe</h3>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipisicing
+									elit, sed...
+								</p>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="vendors/images/photo1.jpg" alt="" />
+								<h3>Lea R. Frith</h3>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipisicing
+									elit, sed...
+								</p>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="vendors/images/photo2.jpg" alt="" />
+								<h3>Erik L. Richards</h3>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipisicing
+									elit, sed...
+								</p>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="vendors/images/photo3.jpg" alt="" />
+								<h3>John Doe</h3>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipisicing
+									elit, sed...
+								</p>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="vendors/images/photo4.jpg" alt="" />
+								<h3>Renee I. Hansen</h3>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipisicing
+									elit, sed...
+								</p>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="vendors/images/img.jpg" alt="" />
+								<h3>Vicki M. Coleman</h3>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipisicing
+									elit, sed...
+								</p>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+		<div class="main-container">
+			<div class="pd-ltr-20 xs-pd-20-10">
+
+		
+				<!-- Contenido de obton publicaci+on -->
+				<div class="pd-20 bg-white border-radius-4 box-shadow mb-30">
+					<button type="button" class="btn btn-primary btn-sm" data-toggle="modal"
+					data-target="#Medium-modal">
+							<i class="icon-copy ion-android-add-circle"></i>
+							Publicación
+						</button>
+				</div>
+					<!-- MODAL -->
+					<div
+					class="modal fade"
+					id="Medium-modal"
+					tabindex="-1"
+					role="dialog"
+					aria-labelledby="myLargeModalLabel"
+					aria-hidden="true"
+				>
+					<div class="modal-dialog modal-dialog-centered">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h4 class="modal-title title-sm" id="myLargeModalLabel">
+									Nueva Publicación
+								</h4>
+								<button
+									type="button"
+									class="close"
+									data-dismiss="modal"
+									aria-hidden="true"
+								>
+									×
+								</button>
+							</div>
+							<div class="modal-body">
+								
+
+
+
+
+								<form id="myForm">
+									<div class="form-group">
+										<label for="titulo">Agregar título</label>
+										<input id="titulo" class="form-control" type="text" placeholder="Titulo" required>
+									</div>
+								
+									<div class="form-group">
+										<label for="categoria">Selecciona una categoría</label>
+										<select id="categoria" class="custom-select2 form-control" name="state" style="width: 100%; height: 38px" required>
+											<option value=""></option>
+											<option value="AZ">Digital</option>
+											<option value="CO">Óleo</option>
+											<option value="ID">Fotografía</option>
+											<option value="MT">Abstracto</option>
+											<option value="NE">Realismo</option>
+											<option value="NM">Cubismo</option>
+											<option value="ND">Surrealismo</option>
+											<option value="UT">Neoplasticismo</option>
+											<option value="WY">Futurismo</option>
+										</select>
+									</div>
+								
+									<div class="form-group">
+										<label for="imagen">Insertar imagen</label>
+										<input id="image-input" type="file" accept="image/png,image/jpeg" class="form-control-file form-control height-auto" required>
+									</div>
+									<div class="form-group">
+										<div class="image-container">
+											<img id="preview-image" src="#" alt="Ninguna imagen seleccionada">
+										</div>
+									</div> 
+								
+									<div class="form-group">
+										<label for="descripcion">Descripción</label>
+										<input id="descripcion" class="form-control" type="text" placeholder="Johnny Brown" required>
+									</div>
+								
+							</div>
+							
+							<div class="modal-footer">
+								<button
+									type="button"
+									class="btn btn-secondary btn-sm"
+									data-dismiss="modal"
+									onclick="cancelarPublicacion();"
+								>
+									Cancelar
+								</button>
+								<button type="submit" class="btn btn-success btn-sm">Publicar</button>
+							</form>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+
+<!-- Contenido de tarjetas -->
+				<div class="pd-20 bg-white border-radius-4 box-shadow mb-30">
+					<style>
+						.card-img-top {
+							width: 250px;
+							height: 250px;
+							object-fit: cover;
+						}
+					</style>
+					
+					<div class="container">
+						<div class="row">
+							<div class="col-md-1">
+								<a class="btn btn-primary btn-lg btn-previous" href="#carouselExampleControls" role="button" data-slide="prev">
+									<i class="icon-copy ion-arrow-left-c"></i>
+								</a>
+							</div>
+							<div class="col-md-10">
+								<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+									<div class="carousel-inner">
+										<div class="carousel-item active">
+											<div class="row">
+												<div class="col-md-4">
+													<div class="card mb-4">
+														<img src="https://img.freepik.com/foto-gratis/disparo-gran-angular-solo-arbol-que-crece-cielo-nublado-puesta-sol-rodeada-cesped_181624-22807.jpg?q=10&h=200" class="card-img-top" alt="Card 1">
+														<div class="card-body">
+															<div class="card-icons">
+																<i class="bi bi-heart"></i>
+																<i data-toggle="modal" data-target="#commentModal" class="bi bi-chat-dots"></i>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-4">
+													<div class="card mb-4">
+														<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6QNf2p1AWggJNJTfzdWoaIe1Jq7D3uX2eSg&usqp=CAU" class="card-img-top" alt="Card 2">
+														<div class="card-body">
+															<div class="card-icons">
+																<i class="bi bi-heart"></i>
+																<i data-toggle="modal" data-target="#commentModal" class="bi bi-chat-dots"></i>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-4">
+													<div class="card mb-4">
+														<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ8VX0sfHNkqEtYhKl58P-OZuLjXHog8XdegFWhMKfCKDi3CQQ-QY-MslRq_WyzqYTQyM&usqp=CAU" class="card-img-top" alt="Card 3">
+														<div class="card-body">
+															<div class="card-icons">
+																<i class="bi bi-heart"></i>
+																<i data-toggle="modal" data-target="#commentModal" class="bi bi-chat-dots"></i>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="carousel-item">
+											<div class="row">
+												<div class="col-md-4">
+													<div class="card mb-4">
+														<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn1iZAXBUchlwvvuMTHkqUtCkuONw7hybDdg&usqp=CAU" class="card-img-top" alt="Card 4">
+														<div class="card-body">
+															<div class="card-icons">
+																<i class="bi bi-heart"></i>
+																<i data-toggle="modal" data-target="#commentModal" class="bi bi-chat-dots"></i>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-4">
+													<div class="card mb-4">
+														<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn1iZAXBUchlwvvuMTHkqUtCkuONw7hybDdg&usqp=CAU" class="card-img-top" alt="Card 5">
+														<div class="card-body">
+															<div class="card-icons">
+																<i class="bi bi-heart"></i>
+																<i data-toggle="modal" data-target="#commentModal" class="bi bi-chat-dots"></i>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-4">
+													<div class="card mb-4">
+														<img src="https://via.placeholder.com/300" class="card-img-top" alt="Card 6">
+														<div class="card-body">
+															<div class="card-icons">
+																<i class="bi bi-heart"></i>
+																<i data-toggle="modal" data-target="#commentModal" class="bi bi-chat-dots"></i>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-1">
+								<a class="btn btn-primary btn-lg btn-next" href="#carouselExampleControls" role="button" data-slide="next">
+									<i class="icon-copy ion-arrow-right-c"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Modal -->
+					<!-- Modal -->
+<div class="modal fade" id="commentModal" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="commentModalLabel">Comments</h5>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+		  <div class="chat-detail">
+			<div class="chat-box">
+			  <div class="chat-desc customscroll">
+				<ul class="comment-list">
+				  <li class="comment-item">
+					<div class="comment-avatar avatar-small">
+					  <img src="https://www.lavanguardia.com/andro4all/hero/2023/04/6d8841b6-9d24-457a-95c5-0d3de1d7bf5f.png?width=768&aspect_ratio=16:9&format=nowebp" alt="Avatar">
+					</div>
+					<div class="comment-body">
+					  <h6 class="comment-author">John Doe</h6>
+					  <span class="comment-date">June 28, 2023</span>
+					  <p class="comment-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus consequat mi eget leo tincidunt, sed tincidunt felis aliquet.</p>
+					</div>
+				  </li>
+				  <li class="comment-item">
+					<div class="comment-avatar avatar-small">
+					  <img src="https://www.lavanguardia.com/andro4all/hero/2023/04/6d8841b6-9d24-457a-95c5-0d3de1d7bf5f.png?width=768&aspect_ratio=16:9&format=nowebp" alt="Avatar">
+					</div>
+					<div class="comment-body">
+					  <h6 class="comment-author">Jane Smith</h6>
+					  <span class="comment-date">June 29, 2023</span>
+					  <p class="comment-text">Ut vulputate magna sed nunc pharetra, vitae dignissim eros tincidunt. Suspendisse a dapibus lacus.</p>
+					</div>
+				  </li>
+				  <li class="comment-item">
+					<div class="comment-avatar avatar-small">
+					  <img src="https://www.lavanguardia.com/andro4all/hero/2023/04/6d8841b6-9d24-457a-95c5-0d3de1d7bf5f.png?width=768&aspect_ratio=16:9&format=nowebp" alt="Avatar">
+					</div>
+					<div class="comment-body">
+					  <h6 class="comment-author">Mark Johnson</h6>
+					  <span class="comment-date">June 30, 2023</span>
+					  <p class="comment-text">Vestibulum auctor feugiat sem, ut fermentum neque varius eu. Nullam feugiat tristique purus, sed feugiat nunc ultrices in.</p>
+					</div>
+				  </li>
+				  <!-- Add more comments here -->
+				</ul>
+			  </div>
+			  <div class="chat-footer">
+				<div class="file-upload">
+				  <a href="#"><i class="fa fa-paperclip"></i></a>
+				</div>
+				<div class="chat_text_area">
+				  <textarea placeholder="Write a comment..."></textarea>
+				</div>
+				<div class="chat_send">
+				  <button class="btn btn-link" type="submit">
+					<i class="icon-copy ion-paper-airplane"></i>
+				  </button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<!-- <div class="modal-footer">
+		  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		</div> -->
+	  </div>
+	</div>
+  </div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				</div>
+		<!-- welcome modal start -->
+		<!-- <script src="main.js"></script> -->
+		<!-- welcome modal end -->
+		<!-- <script src="./js/index.js"></script> -->
+		<!-- js -->
+		<script src="js/publicacion.js"></script>
+		<script src="vendors/scripts/core.js"></script>
+		<script src="vendors/scripts/script.min.js"></script>
+		<script src="vendors/scripts/process.js"></script>
+		<script src="vendors/scripts/layout-settings.js"></script>
+		<script src="vendors/scripts/index.js"></script>
+		<!-- <script src="vendors/scripts/scriptindex.js"></script> -->
+
+		<!-- add sweet alert js & css in footer -->
+		<script src="src/plugins/sweetalert2/sweetalert2.all.js"></script>
+		<script src="src/plugins/sweetalert2/sweet-alert.init.js"></script>
+		<!-- Google Tag Manager (noscript) -->
+		<noscript
+			><iframe
+				src="https://www.googletagmanager.com/ns.html?id=GTM-NXZMQSS"
+				height="0"
+				width="0"
+				style="display: none; visibility: hidden"
+			></iframe
+		></noscript>
+		<!-- End Google Tag Manager (noscript) -->
+	</body>
+</html>
