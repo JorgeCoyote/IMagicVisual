@@ -141,6 +141,7 @@
 								<img src="vendors/images/logo.jpeg" alt="" />
 							</span>
 							<span class="user-name">Coyote@342</span>
+							<i class="icon-copy fa fa-user-circle-o" aria-hidden="true"></i>
 						</a>
 						<div
 							class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list"
@@ -158,25 +159,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="github-link">
-					<a href="https://github.com/dropways/deskapp" target="_blank"
-						><img src="vendors/images/github.svg" alt=""
-					/></a>
-				</div>
-			</div>
-		</div>
-
-		<div class="right-sidebar">
-			<div class="sidebar-title">
-				<h3 class="weight-600 font-16 text-blue">
-					Layout Settings
-					<span class="btn-block font-weight-400 font-12"
-						>User Interface Settings</span
-					>
-				</h3>
-				<div class="close-sidebar" data-toggle="right-sidebar-close">
-					<i class="icon-copy ion-close-round"></i>
-				</div>
+				
 			</div>
 		</div>
 
@@ -210,30 +193,34 @@
 								<span class="micon bi bi-house"></span>
 								<span class="mtext">Categorías</span>
 							</a>
-							<ul class="submenu">
+							<ul id="listCat" class="submenu">
 								
-								<li><a>Todos</a></li>
-								<script>
-							const categorias = [
-							"Digital",
-							"Oleo",
-							"Fotografía",
-							"Abstracto",
-							"Realismo",
-							"Cubismo",
-							"Surrealismo",
-							"Neoplasticismo",
-							"Futurismo",
-							"Otros"
-												];
-
-categorias.forEach(categoria => {
-    document.write(`<li><a>${categoria}</a></li>`);
-});
-								</script>
+								<li><a class="active">Todos</a></li>
+								
 							</ul>
 						</li>
-						
+						<li>
+							<a class="dropdown-toggle no-arrow" data-toggle="modal"
+							data-target="#Medium-modal">
+								<span class="micon fa fa-plus"></span>
+								
+								<span class="mtext">Publicación</span>
+							</a>
+						</li>
+						<li>
+							<a class="dropdown-toggle no-arrow">
+								<span class="micon dw dw-user1"></span>
+								
+								<span class="mtext">Perfil</span>
+							</a>
+						</li>
+						<li>
+							<a href="login.html" class="dropdown-toggle no-arrow">
+								<span class="micon dw dw-logout"></span>
+								
+								<span class="mtext">Cerrar sesión</span>
+							</a>
+						</li>
 						<li>
 							<div class="dropdown-divider"></div>
 						</li>
@@ -243,97 +230,77 @@ categorias.forEach(categoria => {
 		</div>
 	<!-- Barra de navegación fin -->
 
-	<div class="user-notification">
-		<div class="dropdown">
-			<a
-				class="dropdown-toggle no-arrow"
-				href="#"
-				role="button"
-				data-toggle="dropdown"
-			>
-			<i class="bi bi-chat-dots"></i>
-				<span class="badge notification-active"></span>
-			</a>
-			<div class="dropdown-menu dropdown-menu-right">
-				<div class="notification-list mx-h-350 customscroll">
-					<ul>
-						<li>
-							<a href="#">
-								<img src="vendors/images/img.jpg" alt="" />
-								<h3>John Doe</h3>
-								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing
-									elit, sed...
-								</p>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<img src="vendors/images/photo1.jpg" alt="" />
-								<h3>Lea R. Frith</h3>
-								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing
-									elit, sed...
-								</p>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<img src="vendors/images/photo2.jpg" alt="" />
-								<h3>Erik L. Richards</h3>
-								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing
-									elit, sed...
-								</p>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<img src="vendors/images/photo3.jpg" alt="" />
-								<h3>John Doe</h3>
-								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing
-									elit, sed...
-								</p>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<img src="vendors/images/photo4.jpg" alt="" />
-								<h3>Renee I. Hansen</h3>
-								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing
-									elit, sed...
-								</p>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<img src="vendors/images/img.jpg" alt="" />
-								<h3>Vicki M. Coleman</h3>
-								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing
-									elit, sed...
-								</p>
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
+	
 		<div class="main-container">
-			<div class="pd-ltr-20 xs-pd-20-10">
+			<div class="title pb-20">
+				<h2 class="h3 mb-0">Red Social</h2>
+			</div>
 
-		
+			<div class="row pb-10">
+				<div class="col-xl-4 col-lg-4 col-md-6 mb-20">
+					<div class="card-box height-100-p widget-style3">
+						<div class="d-flex flex-wrap">
+							<div class="widget-data">
+								<div class="weight-700 font-24 text-dark">75,874</div>
+								<div class="font-14 text-secondary weight-500">
+									Publicaciones
+								</div>
+							</div>
+							<div class="widget-icon">
+								<div class="icon" data-color="#00eccf">
+									<!-- <i class="icon-copy dw dw-calendar1"></i> -->
+									<i class="icon-copy ion-android-radio-button-on"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-4 col-lg-4 col-md-6 mb-20">
+					<div class="card-box height-100-p widget-style3">
+						<div class="d-flex flex-wrap">
+							<div class="widget-data">
+								<div class="weight-700 font-24 text-dark">124,551</div>
+								<div class="font-14 text-secondary weight-500">
+									Me encantas
+								</div>
+							</div>
+							<div class="widget-icon">
+								<div class="icon" data-color="#ff5b5b">
+									<span class="icon-copy ti-heart"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-4 col-lg-4 col-md-6 mb-20">
+					<div class="card-box height-100-p widget-style3">
+						<div class="d-flex flex-wrap">
+							<div class="widget-data">
+								<div class="weight-700 font-24 text-dark">403674</div>
+								<div class="font-14 text-secondary weight-500">
+									Comentarios
+								</div>
+							</div>
+							<div class="widget-icon">
+								<div class="icon">
+									<i class="icon-copy ion-chatbubble-working"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+
+			<div class="pd-ltr-20 xs-pd-20-10">
 				<!-- Contenido de obton publicaci+on -->
-				<div class="pd-20 bg-white border-radius-4 box-shadow mb-30">
+				<!-- <div class="pd-20 bg-white border-radius-4 box-shadow mb-30">
 					<button type="button" class="btn btn-primary btn-sm" data-toggle="modal"
 					data-target="#Medium-modal">
 							<i class="icon-copy ion-android-add-circle"></i>
 							Publicación
 						</button>
-				</div>
+				</div> -->
 					<!-- MODAL -->
 					<div
 					class="modal fade"
@@ -608,6 +575,7 @@ categorias.forEach(categoria => {
 		<!-- welcome modal end -->
 		<!-- <script src="./js/index.js"></script> -->
 		<!-- js -->
+		
 		<script src="js/publicacion.js"></script>
 		<script src="vendors/scripts/core.js"></script>
 		<script src="vendors/scripts/script.min.js"></script>
