@@ -45,45 +45,101 @@ document.getElementById("login-link").addEventListener("click", function(e){
                 .then(response => response.json())
                 .then(result => {
                     if(result.status == 'success'){
+                        localStorage.setItem('token',JSON.stringify(result));
+                        window.location.href = 'index.html';
+                        console.log(localStorage.getItem('token'));
                         swal({
                                         title: "SweetAlert!",
-                                        text: "¡Registro enviado!",
+                                        text: "¡Sesión iniciada!",
                                         icon: "success",
                                         button: "Aceptar"
                                     });
                     }
+                    else{
+                        document.getElementById("myFormLogin").reset();
+                        swal({
+                            title: "SweetAlert!",
+                            text: "¡No se pudo iniciar sesión!",
+                            icon: "danger",
+                            button: "Aceptar"
+                        });
+                    }
                   console.log(result); // Mostrar la respuesta en la consola
                 })
                 .catch(error => {
+                    document.getElementById("myFormLogin").reset();
                   console.error('Error:', error);
                 });
-                ///////////////////////////////
-            // $.ajax({
-            //     url: url,
-            //     type: 'POST',
-            //     data: data,
-            //     dataType: 'json',
-            //     success: function(response) {
-            //         if(response.status == 'success'){
-            //             swal({
-            //                             title: "SweetAlert!",
-            //                             text: "¡Registro enviado!",
-            //                             icon: "success",
-            //                             button: "Aceptar"
-            //                         });
-            //         }
-            //       console.log(response); // Hacer algo con la respuesta
-            //     },
-            //     error: function(xhr, status, error) {
-            //       console.error('Error en la petición:', error);
-            //     }
-            //   });
-           
-            console.log('El formulario es válido. Se puede enviar.');
-            // Aquí puedes realizar las acciones necesarias, como enviar el formulario o ejecutar una función de guardado
+            
+       
         } else {
+            document.getElementById("myFormLogin").reset();
             console.log('Hay campos inválidos en el formulario. Corrígelos antes de enviar.');
         }
     });
 
 // }
+
+function registerUser(){
+    const url = 'http://localhost/servidor/api-red-social/Usuario/agregarUsuario.php';
+
+    const nombre = document.getElementById('nombreR').value;
+    const correo = document.getElementById('correoR').value;
+    const contrasena = document.getElementById('contrasenaR').value;
+
+    var data = {
+        nombre: nombre,
+        correo: correo,
+        contrasena: contrasena,
+        fecha: Date.now
+    }
+
+    fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+        .then(response => response.json())
+        .then(result => {
+            if(result.status == 'success'){
+   
+                swal({
+                                title: "SweetAlert!",
+                                text: "¡Registro exitoso!",
+                                icon: "success",
+                                button: "Aceptar"
+                            });
+            }
+            else{
+                console.log(result);
+                // document.getElementById("myFormLogin").reset();
+                swal({
+                    title: "SweetAlert!",
+                    text: "¡No se pudo registrar!",
+                    icon: "danger",
+                    button: "Aceptar"
+                });
+            }
+          console.log(result); // Mostrar la respuesta en la consola
+        })
+        .catch(error => {
+           
+          console.error('Error:', error);
+        });
+}
+
+function logout(){
+    var logoutLink = document.getElementById('logout-link');
+
+    // Asigna el evento onclick para cerrar sesión
+    // logoutLink.onclick = function() {
+      // Realiza las acciones necesarias para cerrar sesión, como eliminar los datos del localStorage
+      localStorage.removeItem('token');
+     window.location.href = 'login.html'; 
+      // Redirige al usuario a otra página
+     // Reemplaza 'login.html' con la URL de la página de inicio de sesión
+    // };
+}
+
