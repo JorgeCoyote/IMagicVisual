@@ -1,262 +1,47 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<!-- Basic Page Info -->
-		<meta charset="utf-8" />
-		<title>MagicVisual</title>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <title>Inicio de sesión con Google</title>
+  <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-auth.js"></script>
+  <script>
+    // Tu configuración de Firebase
+    const firebaseConfig = {
+      apiKey: "AIzaSyBc99LvfKh1wYB8T-64EGVyA-R3CKSRRf8",
+      authDomain: "magicvisual-1f036.firebaseapp.com",
+      projectId: "magicvisual-1f036",
+      storageBucket: "magicvisual-1f036.appspot.com",
+      messagingSenderId: "74321411922",
+      appId: "1:74321411922:web:2c194c96a0e65dfec0048b",
+      measurementId: "G-1H6XC9PVZ3"
+    };
 
-		<!-- Site favicon -->
-		<link
-			rel="apple-touch-icon"
-			sizes="180x180"
-			href="vendors/images/apple-touch-icon.png"
-		/>
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="32x32"
-			href="vendors/images/favicon-32x32.png"
-		/>
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="16x16"
-			href="vendors/images/favicon-16x16.png"
-		/>
+    // Inicializar Firebase
+    firebase.initializeApp(firebaseConfig);
 
-		<!-- Mobile Specific Metas -->
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1, maximum-scale=1"
-		/>
+    // Obtener la instancia de autenticación
+    var auth = firebase.auth();
 
-		<!-- Google Font -->
-		<link
-			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-			rel="stylesheet"
-		/>
-		<!-- CSS -->
-		<link rel="stylesheet" type="text/css" href="vendors/styles/core.css" />
-		<link
-			rel="stylesheet"
-			type="text/css"
-			href="vendors/styles/icon-font.min.css"
-		/>
-		<link rel="stylesheet" type="text/css" href="vendors/styles/style.css" />
+    // Función para iniciar sesión con Google
+    function signInWithGoogle() {
+      var provider = new firebase.auth.GoogleAuthProvider();
 
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script
-			async
-			src="https://www.googletagmanager.com/gtag/js?id=G-GBZ3SGGX85"
-		></script>
-		<script
-			async
-			src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2973766580778258"
-			crossorigin="anonymous"
-		></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag() {
-				dataLayer.push(arguments);
-			}
-			gtag("js", new Date());
-
-			gtag("config", "G-GBZ3SGGX85");
-		</script>
-		<!-- Google Tag Manager -->
-		<script>
-			(function (w, d, s, l, i) {
-				w[l] = w[l] || [];
-				w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-				var f = d.getElementsByTagName(s)[0],
-					j = d.createElement(s),
-					dl = l != "dataLayer" ? "&l=" + l : "";
-				j.async = true;
-				j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-				f.parentNode.insertBefore(j, f);
-			})(window, document, "script", "dataLayer", "GTM-NXZMQSS");
-		</script>
-		<!-- End Google Tag Manager -->
-	</head>
-	<body>
-		<!-- <div class="pre-loader">
-			<div class="pre-loader-box">
-				<div class="loader-logo">
-					<img src="vendors/images/logo.jpeg" alt="" />
-				</div>
-				<div class="loader-progress" id="progress_div">
-					<div class="bar" id="bar1"></div>
-				</div>
-				<div class="percent" id="percent1">0%</div>
-				<div class="loading-text">Loading...</div>
-			</div>
-		</div> -->
-
-		<div class="header ">
-			<div class="header-left">
-				<div class="menu-icon bi bi-list"></div>
-				<div
-					class="search-toggle-icon bi bi-search"
-					data-toggle="header_search"
-				></div>
-				<div class="header-search">
-					<form>
-						<div class="form-group mb-0">
-							<!-- <i class="dw dw-search2 search-icon"></i> -->
-							<input
-								type="text"
-								class="form-control search-input"
-								placeholder="Search Here"
-							/>
-							<div class="dropdown">
-								<a
-									class="dropdown-toggle no-arrow"
-									href="#"
-									role="button"
-									data-toggle="dropdown"
-								>
-								<i class="icon-copy bi bi-search"></i>
-								</a>
-
-							</div>
-						</div>
-					</form>
-				</div>
-			</div>
-			<div class="header-right">
-				
-				<div class="user-info-dropdown">
-					<div class="dropdown">
-						<a
-							class="dropdown-toggle"
-							href="#"
-							role="button"
-							data-toggle="dropdown"
-						>
-							<span class="user-icon">
-								<img src="vendors/images/logo.jpeg" alt="" />
-							</span>
-							<span class="user-name">Coyote342</span>
-						</a>
-						<div
-							class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list"
-						>
-							
-							<a class="dropdown-item" href="profile.html"
-								><i class="dw dw-settings2"></i> Opciones</a
-							>
-							<a class="dropdown-item" href="perfil.html"
-								><i class="dw dw-user1"></i> Perfil</a
-							>
-							<a class="dropdown-item" href="login.html"
-								><i class="dw dw-logout"></i> Cerrar Sesión</a
-							>
-						</div>
-					</div>
-				</div>
-				
-			</div>
-		</div>
-
-		<div class="right-sidebar">
-			<div class="sidebar-title">
-				<h3 class="weight-600 font-16 text-blue">
-					Layout Settings
-					<span class="btn-block font-weight-400 font-12"
-						>User Interface Settings</span
-					>
-				</h3>
-				<div class="close-sidebar" data-toggle="right-sidebar-close">
-					<i class="icon-copy ion-close-round"></i>
-				</div>
-			</div>
-		</div>
-
-		<div class="left-side-bar">
-			<div class="brand-logo">
-				<a href="index.html">
-					<img src="vendors/images/logo.jpeg" alt="" class="dark-logo" />
-					<img
-						src="vendors/images/deskapp-logo-white.svg"
-						alt=""
-						class="light-logo"
-					/>
-				</a>
-				<div class="close-sidebar" data-toggle="left-sidebar-close">
-					<i class="ion-close-round"></i>
-				</div>
-			</div>
-			<div class="menu-block customscroll">
-				<div class="sidebar-menu">
-					<ul id="accordion-menu">
-
-						<li>
-							<div class="dropdown-divider"></div>
-						</li>
-						<li>
-							<div class="sidebar-small-cap">Categorias</div>
-						</li>
-						<li class="dropdown">
-							<a href="javascript:;" class="dropdown-toggle">
-								<span class="micon bi bi-house"></span
-								><span class="mtext">Categorias</span>
-							</a>
-							<ul class="submenu">
-								<li><a >Todos</a></li>
-								<li><a href="index2">Dashboard style 2</a></li>
-								<li><a href="index3.html">Dashboard style 3</a></li>
-							</ul>
-						</li>
-						<li>
-							<div class="dropdown-divider"></div>
-						</li>
-										</ul>
-				</div>
-			</div>
-		</div>
-		<div class="mobile-menu-overlay"></div>
-
-		<div class="main-container">
-			<div class="pd-ltr-20 xs-pd-20-10">
-				<div class="min-height-200px">
-                        <div class="pd-20 bg-white border-radius-4 box-shadow mb-30">
-                            <!-- todo el contenido va ir aquí -->
-                            <div class="container text-center">
-                                <div class="row">
-                                  <div class="col-sm-8"></div>
-                                  <div class="col-sm-4">
-                                    <button class="btn btn-primary">Publicación</button>
-                                  </div>
-                                </div>
-                                
-                              </div>
-                        </div>
-				</div>
-				<div class="footer-wrap pd-20 mb-20 card-box">
-					Aplicación desarrollada por Juanito
-					<a href="https://github.com/dropways" target="_blank"
-						>Copyright</a
-					>
-				</div>
-			</div>
-		</div>
-		<!-- welcome modal start -->
-		
-		<!-- welcome modal end -->
-		<!-- js -->
-		<script src="vendors/scripts/core.js"></script>
-		<script src="vendors/scripts/script.min.js"></script>
-		<script src="vendors/scripts/process.js"></script>
-		<script src="vendors/scripts/layout-settings.js"></script>
-		<!-- Google Tag Manager (noscript) -->
-		<noscript
-			><iframe
-				src="https://www.googletagmanager.com/ns.html?id=GTM-NXZMQSS"
-				height="0"
-				width="0"
-				style="display: none; visibility: hidden"
-			></iframe
-		></noscript>
-		<!-- End Google Tag Manager (noscript) -->
-	</body>
+      firebase.auth().signInWithPopup(provider)
+        .then(function(result) {
+          // El usuario ha iniciado sesión con Google exitosamente
+          var user = result.user;
+          console.log(user);
+        })
+        .catch(function(error) {
+          // Ocurrió un error durante la autenticación con Google
+          console.error(error);
+        });
+    }
+  </script>
+</head>
+<body>
+  <h1>Inicio de sesión con Google</h1>
+  <button id="signInButton" onclick="signInWithGoogle()">Iniciar sesión con Google</button>
+</body>
 </html>

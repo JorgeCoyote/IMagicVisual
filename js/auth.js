@@ -1,4 +1,5 @@
 
+
 document.getElementById("register-link").addEventListener("click", function(e){
     e.preventDefault();
     document.getElementById("login-form").style.display = 'none';
@@ -10,17 +11,12 @@ document.getElementById("login-link").addEventListener("click", function(e){
     document.getElementById("registro-form").style.display = 'none';
     document.getElementById("login-form").style.display = 'block';
 });
-
-
+//////////////////////////
 
 
 //////-----------------------------------------------------------------------////////
-
 // function autenticarLogin(){
     const url = 'http://localhost/servidor/api-red-social/Usuario/auth.php';
-
-
-
     document.getElementById('myFormLogin').addEventListener('submit', function(event) {
         event.preventDefault();
         if (this.checkValidity()) {
@@ -35,6 +31,7 @@ document.getElementById("login-link").addEventListener("click", function(e){
                 correo: correo,
                 contrasena: contrasena
             }
+                   
             fetch(url, {
                 method: 'POST',
                 headers: {
@@ -45,23 +42,28 @@ document.getElementById("login-link").addEventListener("click", function(e){
                 .then(response => response.json())
                 .then(result => {
                     if(result.status == 'success'){
+                      console.log("Respuesta auth: ", result);
                         localStorage.setItem('token',JSON.stringify(result));
                         window.location.href = 'index.html';
+                        
                         console.log(localStorage.getItem('token'));
-                        swal({
-                                        title: "SweetAlert!",
-                                        text: "¡Sesión iniciada!",
-                                        icon: "success",
-                                        button: "Aceptar"
-                                    });
+                        Swal.fire({
+                          position: 'top-end',
+                          icon: 'success',
+                          title: 'Sesión iniciada correctamente',
+                          showConfirmButton: false,
+                          timer: 1200
+                        })
                     }
                     else{
                         document.getElementById("myFormLogin").reset();
                         swal({
-                            title: "SweetAlert!",
-                            text: "¡No se pudo iniciar sesión!",
-                            icon: "danger",
-                            button: "Aceptar"
+                           position: 'center',
+                          icon: 'success',
+                          title: 'Error al iniciar sesión!',
+                          showConfirmButton: false,
+                          timer: 1200
+                            // button: "Aceptar"
                         });
                     }
                   console.log(result); // Mostrar la respuesta en la consola
@@ -109,7 +111,7 @@ function registerUser(){
                                 title: "SweetAlert!",
                                 text: "¡Registro exitoso!",
                                 icon: "success",
-                                button: "Aceptar"
+                                // button: "Aceptar"
                             });
             }
             else{
@@ -119,7 +121,7 @@ function registerUser(){
                     title: "SweetAlert!",
                     text: "¡No se pudo registrar!",
                     icon: "danger",
-                    button: "Aceptar"
+                    // button: "Aceptar"
                 });
             }
           console.log(result); // Mostrar la respuesta en la consola
@@ -137,7 +139,8 @@ function logout(){
     // logoutLink.onclick = function() {
       // Realiza las acciones necesarias para cerrar sesión, como eliminar los datos del localStorage
       localStorage.removeItem('token');
-     window.location.href = 'login.html'; 
+    if(localStorage.getItem('token') == null)
+         window.location.href = 'login.html'; 
       // Redirige al usuario a otra página
      // Reemplaza 'login.html' con la URL de la página de inicio de sesión
     // };
