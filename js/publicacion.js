@@ -267,5 +267,5 @@ function actualizarContenido(){
 	alert ("Actualiza el contenido");
 }
 
-										
+
 											
